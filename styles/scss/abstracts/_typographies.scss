@@ -1,0 +1,17 @@
+// @font-face {
+//   font-family: 'Alata';
+//   src: url('../../public/font/Alata-Regular.ttf') format('ttf');
+//       font-display: swap;
+//       font-style: normal;
+// }
+// Alata -> for the majority of the site (Sans Serif)
+
+@import url("https://use.typekit.net/dui0lqz.css");
+// Titan One -> for titles...(Serif)
+
+html{
+  font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  font-family: timonium, sans-serif;
+}
