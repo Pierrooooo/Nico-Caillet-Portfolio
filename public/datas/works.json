@@ -1,0 +1,38 @@
+{
+    "works": {
+        "01": {
+            "title": "Projet 01",
+            "images": [
+                {
+                    "title": "image 01",
+                    "url":"/images/landscape-01.jpeg"
+                },
+                {
+                    "title": "image 02",
+                    "url":"/images/landscape-02.jpeg"
+                },
+                {
+                    "title": "image 03",
+                    "url":"/images/landscape-02.jpeg"
+                }
+            ]
+        },
+        "02": {
+            "title": "Projet 02",
+            "images": [
+                {
+                    "title": "image 01",
+                    "url":"/images/landscape-02.jpeg"
+                },
+                {
+                    "title": "image 02",
+                    "url":"/images/landscape-01.jpeg"
+                },
+                {
+                    "title": "image 03",
+                    "url":"/images/landscape-01.jpeg"
+                }
+            ]
+        }
+    }
+}

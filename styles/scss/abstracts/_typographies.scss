@@ -1,17 +1,18 @@
-// @font-face {
-//   font-family: 'Alata';
-//   src: url('../../public/font/Alata-Regular.ttf') format('ttf');
-//       font-display: swap;
-//       font-style: normal;
-// }
-// Alata -> for the majority of the site (Sans Serif)
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap%27");
+// Lexend -> for the majority of the site
 
-@import url("https://use.typekit.net/dui0lqz.css");
-// Titan One -> for titles...(Serif)
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap%27");
+// Titan One -> for titles...
+
+$font-primary: 'Big Shoulders Display', cursive;
+$font-secondary: 'timonium';
+
+$font-black: 900;
 
 html{
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-primary;
 }
+
 h1,h2,h3,h4,h5{
-  font-family: timonium, sans-serif;
+  font-family: $font-secondary;
 }
