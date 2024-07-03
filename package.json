@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "barba": "^1.0.0",
+    "@barba/core": "^2.10.0",
     "gsap": "^3.12.5",
     "next": "14.2.4",
     "react": "^18",
