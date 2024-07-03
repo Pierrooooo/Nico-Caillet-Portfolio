@@ -1,10 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
+    <div className={styles.main}>
+      <Link href="/works">
+        <p>View Works</p>
+      </Link>
 
       <div className={styles.grid}>
         <a
@@ -57,6 +60,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </div>
   );
 }
