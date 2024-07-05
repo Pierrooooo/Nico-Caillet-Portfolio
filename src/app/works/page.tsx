@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link';
 
 interface Work {
@@ -18,7 +20,7 @@ export default function Works(): JSX.Element {
             <ul>
                 {works.map(work => (
                     <li key={work.id}>
-                        <Link href={`/work/${work.id}`}>
+                        <Link href={`/works/${work.id}`}>
                             <p>{work.title}</p>
                         </Link>
                     </li>

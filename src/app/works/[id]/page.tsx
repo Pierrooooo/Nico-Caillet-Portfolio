@@ -1,9 +1,11 @@
-import { useRouter } from 'next/router';
-import styles from "../works.module.css";
+'use client'
 
-export default function Work() {
-    const router = useRouter();
-    const { id } = router.query;
+import { useParams } from 'next/navigation';
+import styles from "../page.module.css";
+
+
+export default function Work(): JSX.Element {
+    const { id } = useParams();
 
     return (
         <div className={styles.main}>
