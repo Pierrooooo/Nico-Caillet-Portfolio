@@ -1,13 +1,15 @@
 
 .slide_link img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
 }
 
 .slide_link {
    position: relative;
-   display: block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 100%;
    height: 100dvh;
 }
