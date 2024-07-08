@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import "./custom-swiper.css";
+import { Bricolage_Grotesque } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+export const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ['latin'],
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={bricolageGrotesque.className}>
+        <div>{children}</div>
+        </body>
     </html>
   );
 }
