@@ -3,7 +3,7 @@ import "./globals.css";
 import "./custom-swiper.css";
 import { Bricolage_Grotesque } from 'next/font/google';
 
-export const bricolageGrotesque = Bricolage_Grotesque({
+export const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap'
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={bricolageGrotesque.className}>
+      <body className={bricolage.className}>
         <div>{children}</div>
         </body>
     </html>
