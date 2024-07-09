@@ -24,13 +24,16 @@
   --black: rgb(14, 3, 1);
   --white: rgb(248, 244, 236);
   --beige: rgb(211, 184, 140);
+
+  body.monochrome  {
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: var(--white);
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -40,8 +43,6 @@
       rgba(1, 65, 255, 0.3)
     );
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
     --tile-border: conic-gradient(
       #ffffff80,
       #ffffff40,
@@ -51,11 +52,6 @@
       #ffffff10,
       #ffffff80
     );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
   }
 }
 
@@ -84,6 +80,72 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+body img {
+  transition: filter .3s;
+}
+
+body.monochrome img {
+  filter: grayscale(1);
+}
+
+.toggle_body {
+  position: fixed;
+  z-index: 1000;
+  top: 16px;
+  right: 32px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  background-color: transparent;
+  color: var(--beige);
+  mix-blend-mode: color-dodge;
+  cursor: pointer;
+}
+
+.drag_button {
+  position: absolute;
+  z-index: 1000;
+  padding: 20px 0;
+  border-radius: 64px;
+  transform: translate(-50%, 28px);
+  pointer-events: none;
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.drag_button span {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+}
+
+.drag_button span:after,
+.drag_button span:before {
+  height: 20px;
+  width: 20px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  fill: var(--black);
+}
+
+.drag_button span:after {
+  content: '';
+  background-image: url(/assets/icons/arrow-right-thin-b.svg);
+}
+.drag_button span:before {
+  content: '';
+  background-image: url(/assets/icons/arrow-left-thin-b.svg);
 }
 
 .page_title {

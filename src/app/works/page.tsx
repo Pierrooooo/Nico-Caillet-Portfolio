@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
 import Image from 'next/image';
+import ToggleButton from '../toggle-button';
+import FollowButton from '../follow-button';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
@@ -86,10 +88,10 @@ export default function Works(): JSX.Element {
                         <Link href={`/works/${work.id}`} className={styles.slide_link}>
                             {/* <img src={work.image} alt="" /> */}
                             <Image 
-                            src={work.image}
-                            alt=""
-                            width={windowWidth}
-                            height={windowHeight}
+                                src={work.image}
+                                alt=""
+                                width={windowWidth}
+                                height={windowHeight}
                             />
                             <div className="overlay"></div>
                             <div className={styles.slide_texts_container}>
@@ -104,9 +106,11 @@ export default function Works(): JSX.Element {
                         </Link>
                     </SwiperSlide>
                 ))}
+                <FollowButton />
                 <div className={styles.slide_id_text}>{parseFloat(currentWorkId) > 9 ? currentWorkId: '0' + currentWorkId}</div>
                 </Swiper>
             </section>
+            <ToggleButton />
         </main>
     );
 }
