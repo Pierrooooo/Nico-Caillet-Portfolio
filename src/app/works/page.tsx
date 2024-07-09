@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
+import { titleFont } from '../utils/fonts';
 import Image from 'next/image';
 import ToggleButton from '../toggle-button';
 import FollowButton from '../follow-button';
@@ -73,7 +74,7 @@ export default function Works(): JSX.Element {
 
     return (
         <main className={styles.main}>
-            <h1 className='page_title'>Works</h1>
+            <h1 className={`${titleFont.className} page_title`}>Works</h1>
             <section className='section section--slider'>
                 <Swiper
                 modules={[Navigation, A11y]}
@@ -99,7 +100,7 @@ export default function Works(): JSX.Element {
                                     {lineWrapper(work.desc)}
                                     {/* {work.desc} */}
                                 </p>
-                                <p className={styles.slide_title}>
+                                <p className={`${titleFont.className} ${styles.slide_title}`}>
                                     {letterWrapper(work.title)}
                                 </p>
                             </div>

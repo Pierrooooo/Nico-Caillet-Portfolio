@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./custom-swiper.css";
-import { Bricolage_Grotesque } from 'next/font/google';
 import SmoothScrolling from "./SmoothScrolling";
-
-const bricolageGrotesque = Bricolage_Grotesque({
-  subsets: ['latin'],
-  display: 'swap'
-});
+import { textFont } from "./utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={bricolageGrotesque.className}>
+      <body className={textFont.className}>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>
