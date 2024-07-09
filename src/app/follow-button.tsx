@@ -24,7 +24,6 @@ const FollowButton: React.FC = () => {
     };
     
     const parentElement = document.querySelector('.section.section--slider');
-    console.log(parentElement)
     if (parentElement) {
       parentElement.addEventListener('mouseenter', handleMouseEnter);
       parentElement.addEventListener('mouseleave', handleMouseLeave);
