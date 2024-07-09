@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
+import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper/modules';
@@ -74,7 +75,11 @@ export default function Works(): JSX.Element {
                 {works.map(work => (
                     <SwiperSlide key={work.id} className={styles.slide}>
                         <Link href={`/works/${work.id}`} className={styles.slide_link}>
-                            <img src={work.image} alt="" />
+                            {/* <img src={work.image} alt="" /> */}
+                            <Image 
+                            src={work.image}
+                            alt=""
+                            />
                             <div className="overlay"></div>
                             <div className={styles.slide_texts_container}>
                                 <p className={styles.slide_desc}>
