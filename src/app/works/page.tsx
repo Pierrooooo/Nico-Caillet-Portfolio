@@ -53,7 +53,16 @@ const lineWrapper = (desc: string) => {
 
 
 export default function Works(): JSX.Element {
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+    const [windowHeight, setWindowHeight] = useState<number>(0);
     const [currentWorkId, setCurrentWorkId] = useState<string>(works[0].id);
+    
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWindowWidth(window.innerWidth);
+            setWindowHeight(window.innerHeight);
+        }
+    }, []);
 
     const handleSlideChange = (swiper: any) => {
         const activeWork = works[swiper.realIndex];
@@ -79,8 +88,8 @@ export default function Works(): JSX.Element {
                             <Image 
                             src={work.image}
                             alt=""
-                            width={window.innerWidth}
-                            height={window.innerHeight}
+                            width={windowWidth}
+                            height={windowHeight}
                             />
                             <div className="overlay"></div>
                             <div className={styles.slide_texts_container}>
