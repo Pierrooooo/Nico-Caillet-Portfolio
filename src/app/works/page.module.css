@@ -26,7 +26,7 @@
 
 .slide_title,
 .slide_desc {
-    color: white;
+    color: var(--white);
     max-width: 800px;
 }
 

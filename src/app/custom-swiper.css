@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--white);
 }
 
 .swiper-button-prev {
@@ -40,7 +40,7 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    fill: white;
+    fill: var(--white);
 }
 
 .swiper-button-prev:after {
@@ -73,7 +73,7 @@
     display: inline-block;
     border-radius: 12px;
     background: transparent;
-    border: solid 1.5px black;
+    border: solid 1.5px var(--black);
     opacity: .2;
     cursor: pointer;
     transition: .3s;
@@ -91,7 +91,7 @@
 .swiper-pagination-bullet-active {
     opacity: 1;
     width: 24px;
-    background: black;
+    background: var(--black);
 
 }
 

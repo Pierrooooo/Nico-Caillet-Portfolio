@@ -20,6 +20,10 @@
   --bezier-1: cubic-bezier(.5,.5,.68,1);
   --bezier-2: cubic-bezier(.42,.43,1,.56);
   --bezier-3: cubic-bezier(.42,.43,1,.56);
+
+  --black: rgb(14, 3, 1);
+  --white: rgb(248, 244, 236);
+  --beige: rgb(211, 184, 140);
 }
 
 @media (prefers-color-scheme: dark) {
