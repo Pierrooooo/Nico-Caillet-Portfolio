@@ -4,7 +4,7 @@ import "./custom-swiper.css";
 import { Bricolage_Grotesque } from 'next/font/google';
 import SmoothScrolling from "./SmoothScrolling";
 
-export const bricolage = Bricolage_Grotesque({
+export const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap'
 });
