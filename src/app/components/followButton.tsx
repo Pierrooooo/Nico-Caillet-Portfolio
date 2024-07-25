@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
+import styles from './followButton.module.css';
 
 const FollowButton: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
-  const parentRef = useRef<HTMLElement | null>(null);
+  const [scale, setScale] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -16,10 +17,12 @@ const FollowButton: React.FC = () => {
     const handleMouseEnter = () => {
       window.addEventListener('pointermove', handleMouseMove);
       setOpacity(1);
+      setScale(1);
     };
 
     const handleMouseLeave = () => {
       setOpacity(0);
+      setScale(0);
       window.removeEventListener('pointermove', handleMouseMove);
     };
     
@@ -28,27 +31,19 @@ const FollowButton: React.FC = () => {
       parentElement.addEventListener('mouseenter', handleMouseEnter);
       parentElement.addEventListener('mouseleave', handleMouseLeave);
     }
-
-    // return () => {
-    //   if (parentElement) {
-    //     parentElement.removeEventListener('mouseenter', handleMouseEnter);
-    //     parentElement.removeEventListener('mouseleave', handleMouseLeave);
-    //   }
-    //   window.removeEventListener('pointermove', handleMouseMove);
-    // };
   }, []);
 
   const buttonStyle: React.CSSProperties = {
     top: position.y,
     left: position.x,
     opacity: opacity,
-    transition: 'opacity 0.3s',
+    scale: scale,
   };
 
   return (
-    <button style={buttonStyle} className='drag_button'>
+    <div style={buttonStyle} className={`${styles.drag_button} `}>
       <span>Drag</span>
-    </button>
+    </div>
   );
 };
 
